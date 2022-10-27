@@ -1,47 +1,115 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>菜鸟教程</title>
-  </head>
-  <body>
-    <div
-      style="
-        background-color: rgb(201, 198, 204);
-        text-align: center;
-        padding: 40px;
-      "
-    >
-      <img src="https://www.runoob.com/try/demo_source/hackanm.gif" />
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex 布局</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #eee;
+        }
+
+        /* * {
+        border: 1px solid black;
+      } */
+        .yingying {
+            box-shadow: cornflowerblue 0px 2px 3px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .baise {
+            background-color: white;
+        }
+
+        .flex1 {
+            flex: 1;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .mg8 {
+            margin: 8px;
+        }
+
+        .mgr8 {
+            margin-right: 8px;
+        }
+
+        .mgt8 {
+            margin-top: 8px;
+        }
+
+        .daohang {
+            padding: 10px 20px;
+            border-bottom: 1px solid rgb(190, 190, 190);
+            font-size: 14px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body class="flex">
+    <!--侧边栏-->
+    <div style="width: 200px;z-index: 2;" class=" baise yingying">
+        <!--头像栏-->
+        <div style="padding: 10px;align-items: center;justify-content: center;border-bottom: 1px solid #999;"
+            class="flex">
+            <img src="pulpit.jpg" width="80px" height="80px" alt="">
+            <div style="margin-left: 10px;">吴浩</div>
+        </div>
+        <!--导航栏-->
+        <div class="flex1">
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+        </div>
     </div>
-    <div
-      style="
-        text-align: center;
-        max-width: 700px;
-        margin: 30px auto;
-        padding: 15px;
-        line-height: 1.7;
-      "
-    >
-      <p>我是小小菜鸟</p>
-      <p>今天是我学习的第三天</p>
-      <p>有了一点点小小的领悟</p>
-      <p>还要继续加油</p>
-      <p>啦啦啦</p>
-    </div>
-    <div
-      style="
-        background-color: red;
-        text-align: center;
-        padding: 40px;
-        font-size: 12px;
-      "
-    >
-      <p>版本号</p>
-      <a
-        href="https://www.bilibili.com/video/BV1hY411j7UM/?spm_id_from=pageDriver&vd_source=dc057b31cc9432505f2ec4d66d46ec8f"
-        >友情链接</a
-      >
-    </div>
-  </body>
+    <!--主区域-->
+    <div class="flex1 flex column">
+        <!--头部栏-->
+        <div style="height: 60px;z-index: 1;" class="baise yingying"></div>
+        <!--内容区-->
+        <div style="overflow: auto;" class="flex1 flex">
+            <!--左区-->
+            <div style="flex: 3" class="flex column mg8">
+                <!--数据区-->
+                <div class="flex">
+                    <!--数据块-->
+                    <div style="height: 100px" class="flex1 baise mgr8 yingying"></div>
+                    <div style="height: 100px" class="flex1 baise mgr8 yingying"></div>
+                    <div style="height: 100px" class="flex1 baise mgr8 yingying"></div>
+                    <div style="height: 100px" class="flex1 baise yingying"></div>
+                </div>
+
+                <!--列表区-->
+                <div class="flex column">
+                    <!--列表项-->
+                    <div style="height: 160px;" class="baise mgt8 yingying"></div>
+                    <div style="height: 160px;" class="baise mgt8 yingying"></div>
+                    <div style="height: 160px;" class="baise mgt8 yingying"></div>
+                    <div style="height: 160px;" class="baise mgt8 yingying"></div>
+                    <div style="height: 160px;" class="baise mgt8 yingying"></div>
+                </div>
+            </div>
+            <!--右区-->
+            <div style="flex: 1" class="flex column mgr8 mgt8">
+                <!--提示区-->
+                <div style="height: 150px" class="baise yingying"></div>
+                <!--消息区-->
+                <div style="height: 300px" class="baise mgt8 yingying"></div>
+            </div>
+        </div>
+</body>
+
 </html>
